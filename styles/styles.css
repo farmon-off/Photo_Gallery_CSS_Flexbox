@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #f5f6f7;
+}
+
+.header {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: #0a0a23;
+    color: #fff;
+    border-bottom: 4px solid #fdb347;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+/* The justify-content property determines how the items
+inside a flex container are positioned along the main axis,
+affecting their position and the space around them.
+Give your .gallery selector a justify-content property
+with center as the value. */
+
+    justify-content: center;
+
+
+    /*The align-items property positions the flex content*/
+    /*along the cross axis. In this case, with your*/
+    /*flex-direction set to row, your cross axis would be vertical.*/
+
+    /*To vertically center your images, give your*/
+    /*.gallery selector an align-items property with center as the value.*/
+
+    align-items: center;
+
+    /*Your images need some space between them.*/
+    /*The gap CSS shorthand property sets the gaps,*/
+    /*also known as gutters, between rows and columns.*/
+    /*The gap property and its row-gap and column-gap*/
+    /*sub-properties provide this functionality for flex,*/
+    /*grid, and multi-column layout. You apply the*/
+    /*property to the container element.*/
+    /*Give your .gallery flex container a gap property*/
+    /*with 16px as the value.*/
+
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+
+    /*Give your .gallery img selector the object-fit property and set it to cover.*/
+    /*This will tell the image to fill the img container while maintaining*/
+    /*aspect ratio, resulting in cropping to fit.*/
+
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.gallery::after {
+    content: "";
+    width: 350px;
+}
